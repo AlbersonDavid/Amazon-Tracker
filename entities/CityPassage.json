@@ -1,0 +1,42 @@
+{
+  "name": "CityPassage",
+  "type": "object",
+  "properties": {
+    "vessel_mmsi": {
+      "type": "string",
+      "description": "MMSI do navio"
+    },
+    "vessel_name": {
+      "type": "string",
+      "description": "Nome do navio"
+    },
+    "city_name": {
+      "type": "string",
+      "description": "Nome da cidade"
+    },
+    "city_order": {
+      "type": "number",
+      "description": "Ordem da cidade na rota (1=Macap\u00e1, 7=Itacoatiara)"
+    },
+    "passage_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Momento da passagem"
+    },
+    "speed_at_passage": {
+      "type": "number",
+      "description": "Velocidade no momento da passagem (n\u00f3s)"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "vessel_mmsi",
+    "city_name",
+    "passage_time"
+  ]
+}

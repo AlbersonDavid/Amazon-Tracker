@@ -1,0 +1,70 @@
+{
+  "name": "Vessel",
+  "type": "object",
+  "properties": {
+    "mmsi": {
+      "type": "string",
+      "description": "Maritime Mobile Service Identity - identificador \u00fanico do navio"
+    },
+    "imo": {
+      "type": "string",
+      "description": "N\u00famero IMO do navio"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do navio"
+    },
+    "ship_type": {
+      "type": "string",
+      "description": "Tipo de embarca\u00e7\u00e3o"
+    },
+    "flag": {
+      "type": "string",
+      "description": "Bandeira do navio"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude atual"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude atual"
+    },
+    "speed": {
+      "type": "number",
+      "description": "Velocidade em n\u00f3s"
+    },
+    "course": {
+      "type": "number",
+      "description": "Curso em graus"
+    },
+    "destination": {
+      "type": "string",
+      "description": "Destino declarado"
+    },
+    "eta_destination": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ETA calculado para Itacoatiara"
+    },
+    "last_position_update": {
+      "type": "string",
+      "format": "date-time",
+      "description": "\u00daltima atualiza\u00e7\u00e3o de posi\u00e7\u00e3o"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "em_transito",
+        "atracado",
+        "fundeado",
+        "chegou"
+      ],
+      "default": "em_transito"
+    }
+  },
+  "required": [
+    "mmsi",
+    "name"
+  ]
+}
